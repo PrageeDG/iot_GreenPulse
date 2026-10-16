@@ -1,0 +1,1595 @@
+[
+    {
+        "id": "ac191865b8496329",
+        "type": "tab",
+        "label": "Device Status",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4d324b314b52fd81",
+        "type": "tab",
+        "label": "MQTT Monitor",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "135a06b2c06a975e",
+        "type": "tab",
+        "label": "Sensors",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "dda1577ab6791985",
+        "type": "tab",
+        "label": "Header",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f85c67dcadd9a456",
+        "type": "tab",
+        "label": "Smart-care",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d7d3f2d8ec17f983",
+        "type": "tls-config",
+        "name": "",
+        "certType": "files",
+        "cert": "",
+        "key": "",
+        "p12": "",
+        "p12name": "",
+        "ca": "",
+        "certname": "433f0a698a8f71c55042a99f2817275b6101e94f83ae4e3fbc7963978d958399-certificate.pem.crt",
+        "keyname": "433f0a698a8f71c55042a99f2817275b6101e94f83ae4e3fbc7963978d958399-private.pem.key",
+        "caname": "AmazonRootCA1.pem",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": "",
+        "certEnv": "",
+        "keyEnv": "",
+        "caEnv": ""
+    },
+    {
+        "id": "9055f47741664db7",
+        "type": "mqtt-broker",
+        "name": "GreenPulse AWS IoT",
+        "broker": "a1nrnv5x66u1mb-ats.iot.us-east-1.amazonaws.com",
+        "port": "8883",
+        "tls": "d7d3f2d8ec17f983",
+        "clientid": "GreenPulse-NodeRed",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "03fac699bc6d497f",
+        "type": "ui-base",
+        "name": "Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "42e68db1e3045744",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#fcfcfd",
+            "primary": "#0d74ce",
+            "bgPage": "#f9f9fb",
+            "groupBg": "#ffffff",
+            "groupOutline": "#d9d9e0"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "3ac751496726724f",
+        "type": "ui-page",
+        "name": "Overview",
+        "ui": "03fac699bc6d497f",
+        "path": "/overview",
+        "icon": "mdi-home",
+        "layout": "grid",
+        "theme": "42e68db1e3045744",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "a423b6fe4f1c74ff",
+        "type": "ui-group",
+        "name": "Device Status",
+        "page": "3ac751496726724f",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "c88bcd7f14986cbd",
+        "type": "ui-page",
+        "name": "Sensor Analytics",
+        "ui": "03fac699bc6d497f",
+        "path": "/analytics",
+        "icon": "mdi-chart-line",
+        "layout": "grid",
+        "theme": "42e68db1e3045744",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 3,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "55fefa28e248cfb1",
+        "type": "ui-page",
+        "name": "MQTT Monitor",
+        "ui": "03fac699bc6d497f",
+        "path": "/mqtt-monitor",
+        "icon": "mdi-access-point",
+        "layout": "grid",
+        "theme": "42e68db1e3045744",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 4,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "c726738576de79ab",
+        "type": "ui-group",
+        "name": "Sensor History",
+        "page": "c88bcd7f14986cbd",
+        "width": "12",
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "1ad82c894374f2c1",
+        "type": "ui-group",
+        "name": " MQTT Messages",
+        "page": "55fefa28e248cfb1",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "0c335fefca532890",
+        "type": "ui-group",
+        "name": "GreenPulse Dashboard",
+        "page": "3ac751496726724f",
+        "width": "14",
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "fad7c1aaf44dcc13",
+        "type": "ui-group",
+        "name": "Live Sensors",
+        "page": "3ac751496726724f",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "263d011edee30ce3",
+        "type": "ui-group",
+        "name": "MQTT Monitor",
+        "page": "55fefa28e248cfb1",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "2ee5d4031e583c7b",
+        "type": "ui-page",
+        "name": "Smart_care",
+        "ui": "03fac699bc6d497f",
+        "path": "/Smart_care_modified",
+        "icon": "mdi-leaf",
+        "layout": "grid",
+        "theme": "42e68db1e3045744",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "b787c58ef66f2d8c",
+        "type": "ui-group",
+        "name": "_______________________________________________________________________________________________________________________________________________________",
+        "page": "2ee5d4031e583c7b",
+        "width": "12",
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "faf982c6293c82ee",
+        "type": "mqtt in",
+        "z": "ac191865b8496329",
+        "name": "",
+        "topic": "greenpulse/device01/status",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "9055f47741664db7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 470,
+        "y": 40,
+        "wires": [
+            [
+                "fd44b2b2f99f08a3",
+                "21b62c05af5925be",
+                "93197bd026f817ca"
+            ]
+        ]
+    },
+    {
+        "id": "fd44b2b2f99f08a3",
+        "type": "function",
+        "z": "ac191865b8496329",
+        "name": "device status",
+        "func": "if (msg.payload.status === \"online\") {\n    msg.payload = \"🟢 ONLINE\";\n} else {\n    msg.payload = \"🔴 OFFLINE\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 140,
+        "wires": [
+            [
+                "249414bf14fa9a74"
+            ]
+        ]
+    },
+    {
+        "id": "249414bf14fa9a74",
+        "type": "ui-text",
+        "z": "ac191865b8496329",
+        "group": "a423b6fe4f1c74ff",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "MQTT Status",
+        "label": "MQTT Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 470,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "21b62c05af5925be",
+        "type": "function",
+        "z": "ac191865b8496329",
+        "name": "Last Update Time",
+        "func": "msg.payload = new Date().toLocaleString();\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 140,
+        "wires": [
+            [
+                "8eef11887c09d50d"
+            ]
+        ]
+    },
+    {
+        "id": "8eef11887c09d50d",
+        "type": "ui-text",
+        "z": "ac191865b8496329",
+        "group": "a423b6fe4f1c74ff",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Last Update Time",
+        "label": "Last Update Time",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 730,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "93197bd026f817ca",
+        "type": "debug",
+        "z": "ac191865b8496329",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "666305e811aada6e",
+        "type": "inject",
+        "z": "ac191865b8496329",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "N/A",
+        "payloadType": "str",
+        "x": 230,
+        "y": 180,
+        "wires": [
+            [
+                "249414bf14fa9a74",
+                "8eef11887c09d50d"
+            ]
+        ]
+    },
+    {
+        "id": "c9489563ab353f0a",
+        "type": "mqtt in",
+        "z": "4d324b314b52fd81",
+        "name": "",
+        "topic": "greenpulse/device01/#",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "9055f47741664db7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 480,
+        "y": 60,
+        "wires": [
+            [
+                "6375f21a07bf2c1f"
+            ]
+        ]
+    },
+    {
+        "id": "6375f21a07bf2c1f",
+        "type": "function",
+        "z": "4d324b314b52fd81",
+        "name": "Monitoring",
+        "func": "msg.monitor = {\n    topic: msg.topic,\n    timestamp: new Date().toLocaleString(),\n    payload: msg.payload\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 160,
+        "wires": [
+            [
+                "7f614e52a1a000de",
+                "b944108da53898fe",
+                "93b31b944e381d77"
+            ]
+        ]
+    },
+    {
+        "id": "7f614e52a1a000de",
+        "type": "function",
+        "z": "4d324b314b52fd81",
+        "name": "Get Topic",
+        "func": "\nmsg.payload = msg.monitor.topic;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 260,
+        "wires": [
+            [
+                "4aedee4380561e98"
+            ]
+        ]
+    },
+    {
+        "id": "b944108da53898fe",
+        "type": "function",
+        "z": "4d324b314b52fd81",
+        "name": "Get Timestamp",
+        "func": "\nmsg.payload = msg.monitor.timestamp;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 260,
+        "wires": [
+            [
+                "0fed956db351b290"
+            ]
+        ]
+    },
+    {
+        "id": "93b31b944e381d77",
+        "type": "function",
+        "z": "4d324b314b52fd81",
+        "name": "Get Payload",
+        "func": "let payloadValue = msg.payload;\n\nif (typeof payloadValue === \"string\") {\n    try {\n        payloadValue = JSON.parse(payloadValue);\n    } catch (e) {\n        // keep plain string if it is not JSON\n    }\n}\n\nmsg.payload = {\n    topic: msg.topic || \"Unknown topic\",\n    timestamp: new Date().toLocaleString(),\n    data: payloadValue\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 260,
+        "wires": [
+            [
+                "99c42dcbc50452cd"
+            ]
+        ]
+    },
+    {
+        "id": "4aedee4380561e98",
+        "type": "ui-text",
+        "z": "4d324b314b52fd81",
+        "group": "263d011edee30ce3",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Topic",
+        "label": "Topic",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 330,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "0fed956db351b290",
+        "type": "ui-text",
+        "z": "4d324b314b52fd81",
+        "group": "263d011edee30ce3",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Timestamp",
+        "label": "Timestamp",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 550,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "99c42dcbc50452cd",
+        "type": "ui-template",
+        "z": "4d324b314b52fd81",
+        "group": "1ad82c894374f2c1",
+        "page": "",
+        "ui": "",
+        "name": "Payload",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  \n\n    <div class=\"mqtt-payload-title\">\n      Payload\n    </div>\n\n    <pre class=\"mqtt-payload\">{{ formattedPayload }}</pre>\n  </div>\n</template>\n\n<script>\nexport default {\n  computed: {\n    formattedPayload() {\n      if (!this.msg || !this.msg.payload) {\n        return \"Waiting for MQTT data...\";\n      }\n\n      const data = this.msg.payload.data;\n\n      if (typeof data === \"object\") {\n        return JSON.stringify(data, null, 2);\n      }\n\n      return String(data);\n    }\n  }\n}\n</script>\n\n<style>\n.mqtt-card {\n  padding: 16px;\n  border-radius: 12px;\n  background: var(--v-theme-surface);\n  font-family: Arial, sans-serif;\n}\n\n.mqtt-title {\n  font-size: 20px;\n  font-weight: 700;\n  margin-bottom: 16px;\n}\n\n.mqtt-row {\n  margin-bottom: 10px;\n}\n\n\n\n\n\n.mqtt-payload {\n  padding: 12px;\n  border-radius: 8px;\n  overflow-x: auto;\n  white-space: pre-wrap;\n  word-break: break-word;\n  background: rgba(0, 0, 0, 0.08);\n  font-family: monospace;\n  font-size: 13px;\n  line-height: 1.5;\n}\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 780,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b96680bfdf0bb366",
+        "type": "inject",
+        "z": "4d324b314b52fd81",
+        "name": "Not Available",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "N/A",
+        "payloadType": "str",
+        "x": 150,
+        "y": 300,
+        "wires": [
+            [
+                "4aedee4380561e98",
+                "0fed956db351b290"
+            ]
+        ]
+    },
+    {
+        "id": "b5c53f8f2b486ebe",
+        "type": "mqtt in",
+        "z": "135a06b2c06a975e",
+        "name": "",
+        "topic": "greenpulse/device01/sensors",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "9055f47741664db7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 840,
+        "y": 300,
+        "wires": [
+            [
+                "0a2de0865861c527"
+            ]
+        ]
+    },
+    {
+        "id": "0a2de0865861c527",
+        "type": "json",
+        "z": "135a06b2c06a975e",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 830,
+        "y": 400,
+        "wires": [
+            [
+                "41624dfa1513b18b",
+                "d825abe1a3e4b4db",
+                "d4988e3041b56379",
+                "08f37aa0a0d2b057"
+            ]
+        ]
+    },
+    {
+        "id": "ac45f6d650cf55af",
+        "type": "ui-gauge",
+        "z": "135a06b2c06a975e",
+        "name": "Temp Gauge",
+        "group": "fad7c1aaf44dcc13",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Temperature",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "Celcius",
+        "icon": "mdi-thermometer",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353",
+                "text": "Critical",
+                "textType": "str"
+            },
+            {
+                "from": "15",
+                "color": "#ffc800",
+                "text": "Moderate",
+                "textType": "str"
+            },
+            {
+                "from": "18",
+                "color": "#5cd65c",
+                "text": "Favorable",
+                "textType": "str"
+            },
+            {
+                "from": "28",
+                "color": "#ffc800",
+                "text": "Moderate",
+                "textType": "str"
+            },
+            {
+                "from": "35",
+                "color": "#ea5353",
+                "text": "Critical",
+                "textType": "str"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 530,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "41624dfa1513b18b",
+        "type": "function",
+        "z": "135a06b2c06a975e",
+        "name": "Temperature",
+        "func": "msg.payload = msg.payload.temperature;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 500,
+        "wires": [
+            [
+                "ac45f6d650cf55af",
+                "c6df08b6f6718b18"
+            ]
+        ]
+    },
+    {
+        "id": "d825abe1a3e4b4db",
+        "type": "function",
+        "z": "135a06b2c06a975e",
+        "name": "Humidity",
+        "func": "msg.payload = msg.payload.humidity;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 500,
+        "wires": [
+            [
+                "fa55ec60840c96ab",
+                "7bdb2e775e0b144a"
+            ]
+        ]
+    },
+    {
+        "id": "fa55ec60840c96ab",
+        "type": "ui-gauge",
+        "z": "135a06b2c06a975e",
+        "name": "Humidity Gauge",
+        "group": "fad7c1aaf44dcc13",
+        "order": 2,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Humidity",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "%",
+        "icon": "mdi-water-percent",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353",
+                "text": "Critical",
+                "textType": "str"
+            },
+            {
+                "from": "40",
+                "color": "#ffc800",
+                "text": "Moderate",
+                "textType": "str"
+            },
+            {
+                "from": "50",
+                "color": "#5cd65c",
+                "text": "Favorable",
+                "textType": "str"
+            },
+            {
+                "from": "80",
+                "color": "#ffc800",
+                "text": "Moderate",
+                "textType": "str"
+            },
+            {
+                "from": "85",
+                "color": "#ea5353",
+                "text": "Critical",
+                "textType": "str"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 760,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c172d702399644f7",
+        "type": "ui-gauge",
+        "z": "135a06b2c06a975e",
+        "name": "Soil Moisture Gauge",
+        "group": "fad7c1aaf44dcc13",
+        "order": 3,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Soil Moisture",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "%",
+        "icon": "mdi-sprout",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353",
+                "text": "Critical",
+                "textType": "str"
+            },
+            {
+                "from": "25",
+                "color": "#ffc800",
+                "text": "Moderate",
+                "textType": "str"
+            },
+            {
+                "from": "40",
+                "color": "#5cd65c",
+                "text": "Favorable",
+                "textType": "str"
+            },
+            {
+                "from": "70",
+                "color": "#ea5353",
+                "text": "Critical",
+                "textType": "str"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1000,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d4988e3041b56379",
+        "type": "function",
+        "z": "135a06b2c06a975e",
+        "name": "Soil Moisture",
+        "func": "msg.payload = msg.payload.soil_moisture;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 500,
+        "wires": [
+            [
+                "c172d702399644f7",
+                "b664381fb4e4a24b"
+            ]
+        ]
+    },
+    {
+        "id": "3e404a5fa6fd46b7",
+        "type": "ui-gauge",
+        "z": "135a06b2c06a975e",
+        "name": "Light Intensity Gauge",
+        "group": "fad7c1aaf44dcc13",
+        "order": 4,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Light Intensity",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "lux",
+        "icon": "mdi-white-balance-sunny",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353",
+                "text": "Critical",
+                "textType": "str"
+            },
+            {
+                "from": "2000",
+                "color": "#ffc800",
+                "text": "Moderate",
+                "textType": "str"
+            },
+            {
+                "from": "10000",
+                "color": "#5cd65c",
+                "text": "Favorable",
+                "textType": "str"
+            }
+        ],
+        "min": 0,
+        "max": "50000",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1260,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "08f37aa0a0d2b057",
+        "type": "function",
+        "z": "135a06b2c06a975e",
+        "name": "Light Intensity",
+        "func": "msg.payload = msg.payload.light;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 500,
+        "wires": [
+            [
+                "3e404a5fa6fd46b7",
+                "b2331758463a961d"
+            ]
+        ]
+    },
+    {
+        "id": "c6df08b6f6718b18",
+        "type": "ui-chart",
+        "z": "135a06b2c06a975e",
+        "group": "c726738576de79ab",
+        "name": "Temperature History",
+        "label": "Temperature History",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Time",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Value",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "50",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 520,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7bdb2e775e0b144a",
+        "type": "ui-chart",
+        "z": "135a06b2c06a975e",
+        "group": "c726738576de79ab",
+        "name": "Humidity History",
+        "label": "Humidity History",
+        "order": 2,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Time",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Value",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "100",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#1392ec",
+            "#ff0000",
+            "#ff7f0e",
+            "#2b9c2b",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 760,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b664381fb4e4a24b",
+        "type": "ui-chart",
+        "z": "135a06b2c06a975e",
+        "group": "c726738576de79ab",
+        "name": "Soil Moisture History",
+        "label": "Soil Moisture History",
+        "order": 3,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Time",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Value",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "100",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#1392ec",
+            "#ff0000",
+            "#ff7f0e",
+            "#2b9c2b",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 1000,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b2331758463a961d",
+        "type": "ui-chart",
+        "z": "135a06b2c06a975e",
+        "group": "c726738576de79ab",
+        "name": "Light Intensity History",
+        "label": "Light Intensity History",
+        "order": 4,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Time",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Value",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "2000",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#1392ec",
+            "#ff0000",
+            "#ff7f0e",
+            "#2b9c2b",
+            "#9f3fde",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 1260,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cc60e79db301f762",
+        "type": "inject",
+        "z": "135a06b2c06a975e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "N/A",
+        "payloadType": "str",
+        "x": 330,
+        "y": 940,
+        "wires": [
+            [
+                "ac45f6d650cf55af",
+                "fa55ec60840c96ab",
+                "c172d702399644f7",
+                "3e404a5fa6fd46b7"
+            ]
+        ]
+    },
+    {
+        "id": "ce5c1ea0b6814a4e",
+        "type": "ui-template",
+        "z": "dda1577ab6791985",
+        "group": "0c335fefca532890",
+        "page": "",
+        "ui": "",
+        "name": "Header Template",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  <div style=\"\n    padding:18px 22px;\n    border-radius:16px;\n    background:linear-gradient(135deg,#1b5e20,#43a047);\n    color:white;\n  \">\n    <div style=\"font-size:28px;font-weight:700;\">\n      🌱 GreenPulse\n    </div>\n\n    <div style=\"font-size:14px;margin-top:4px;\">\n      Smart Agentic IoT Plant-Care Dashboard\n    </div>\n  </div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 530,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "30f37fc754e09355",
+        "type": "mqtt in",
+        "z": "f85c67dcadd9a456",
+        "name": "",
+        "topic": "greenpulse/device01/care",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "9055f47741664db7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 370,
+        "y": 200,
+        "wires": [
+            [
+                "2d45765a2acd3f51"
+            ]
+        ]
+    },
+    {
+        "id": "c6b6e593640841dc",
+        "type": "mqtt in",
+        "z": "f85c67dcadd9a456",
+        "name": "",
+        "topic": "greenpulse/device01/weather",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "9055f47741664db7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 380,
+        "y": 140,
+        "wires": [
+            [
+                "3aa4c230b0fe960b"
+            ]
+        ]
+    },
+    {
+        "id": "aa83913d623b7f11",
+        "type": "mqtt in",
+        "z": "f85c67dcadd9a456",
+        "name": "",
+        "topic": "greenpulse/device01/notifications",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "9055f47741664db7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 350,
+        "y": 280,
+        "wires": [
+            [
+                "cc8cea674c96c24a"
+            ]
+        ]
+    },
+    {
+        "id": "4efa32e5227c7ba0",
+        "type": "ui-template",
+        "z": "f85c67dcadd9a456",
+        "group": "b787c58ef66f2d8c",
+        "page": "",
+        "ui": "",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <div class=\"gp-smart-care\">\n\n        <div class=\"gp-page-head\">\n            <div>\n                <div class=\"gp-eyebrow\">GREENPULSE · SMART CARE</div>\n                <h2>Plant Care Center</h2>\n                <p>Open a section to view the latest plant-care information.</p>\n            </div>\n        </div>\n\n        <!-- AI CARE -->\n        <div class=\"gp-section\">\n\n            <button\n        class=\"gp-section-header\"\n        @click=\"open.care = !open.care\"\n      >\n        <div class=\"gp-section-left\">\n          <v-icon icon=\"mdi-sprout\"></v-icon>\n\n          <div>\n            <div class=\"gp-title\">Smart Care Recommendation</div>\n            <div class=\"gp-small\">Latest AI-generated care guidance</div>\n          </div>\n        </div>\n\n        <div class=\"gp-section-right\">\n          <span\n            class=\"gp-status\"\n            :class=\"urgencyClass\"\n          >\n            {{ careUrgency }}\n          </span>\n\n          <v-icon\n            :icon=\"open.care ? 'mdi-chevron-up' : 'mdi-chevron-down'\"\n          ></v-icon>\n        </div>\n      </button>\n\n            <div v-if=\"open.care\" class=\"gp-content\">\n                <div class=\"gp-label\">What should I do?</div>\n                <div class=\"gp-main-text\">\n                    {{ careRecommendation }}\n                </div>\n\n                <div class=\"gp-divider\"></div>\n\n                <div class=\"gp-label\">Why?</div>\n                <div class=\"gp-text\">\n                    {{ careReason }}\n                </div>\n\n                <div class=\"gp-quote\">\n                    “{{ careQuote }}”\n                </div>\n            </div>\n\n        </div>\n\n\n        <!-- WEATHER -->\n        <div class=\"gp-section\">\n\n            <button\n        class=\"gp-section-header\"\n        @click=\"open.weather = !open.weather\"\n      >\n        <div class=\"gp-section-left\">\n          <v-icon icon=\"mdi-weather-partly-cloudy\"></v-icon>\n\n          <div>\n            <div class=\"gp-title\">Weather</div>\n            <div class=\"gp-small\">Current conditions and forecast</div>\n          </div>\n        </div>\n\n        <v-icon\n          :icon=\"open.weather ? 'mdi-chevron-up' : 'mdi-chevron-down'\"\n        ></v-icon>\n      </button>\n\n            <div v-if=\"open.weather\" class=\"gp-content\">\n                <div class=\"gp-grid\">\n\n                    <div class=\"gp-info\">\n                        <span>Temperature</span>\n                        <strong>{{ weatherTemperature }}</strong>\n                    </div>\n\n                    <div class=\"gp-info\">\n                        <span>Rain probability</span>\n                        <strong>{{ rainProbability }}</strong>\n                    </div>\n\n                    <div class=\"gp-info\">\n                        <span>Condition</span>\n                        <strong>{{ weatherCondition }}</strong>\n                    </div>\n\n                    <div class=\"gp-info\">\n                        <span>Forecast</span>\n                        <strong>{{ weatherForecast }}</strong>\n                    </div>\n\n                </div>\n            </div>\n\n        </div>\n\n\n        <!-- NOTIFICATIONS -->\n        <div class=\"gp-section\">\n\n            <button\n        class=\"gp-section-header\"\n        @click=\"open.notifications = !open.notifications\"\n      >\n        <div class=\"gp-section-left\">\n          <v-icon icon=\"mdi-bell-outline\"></v-icon>\n\n          <div>\n            <div class=\"gp-title\">Notifications</div>\n            <div class=\"gp-small\">Gardening and plant-care updates</div>\n          </div>\n        </div>\n\n        <div class=\"gp-section-right\">\n          <span class=\"gp-count\">\n            {{ notificationCount }}\n          </span>\n\n          <v-icon\n            :icon=\"open.notifications ? 'mdi-chevron-up' : 'mdi-chevron-down'\"\n          ></v-icon>\n        </div>\n      </button>\n\n            <div v-if=\"open.notifications\" class=\"gp-content\">\n                <div class=\"gp-label\">Relevant messages</div>\n                <div class=\"gp-main-text\">\n                    {{ notificationCount }}\n                </div>\n\n                <div class=\"gp-divider\"></div>\n\n                <div class=\"gp-label\">Summary</div>\n                <div class=\"gp-text\">\n                    {{ notificationSummary }}\n                </div>\n            </div>\n\n        </div>\n\n\n        <!-- WATERING PREDICTION -->\n        <div class=\"gp-section\">\n        \n          <button\n            class=\"gp-section-header\"\n            @click=\"open.prediction = !open.prediction\"\n          >\n            <div class=\"gp-section-left\">\n              <v-icon icon=\"mdi-watering-can-outline\"></v-icon>\n        \n              <div>\n                <div class=\"gp-title\">Next Watering Prediction</div>\n                <div class=\"gp-small\">\n                  Estimated watering time from historical soil-moisture trends\n                </div>\n              </div>\n            </div>\n        \n            <div class=\"gp-section-right\">\n              <span\n                class=\"gp-status\"\n                :class=\"predictionQualityClass\"\n              >\n                {{ predictionQuality }}\n              </span>\n        \n              <v-icon\n                :icon=\"open.prediction ? 'mdi-chevron-up' : 'mdi-chevron-down'\"\n              ></v-icon>\n            </div>\n          </button>\n        \n          <div v-if=\"open.prediction\" class=\"gp-content\">\n        \n            <!-- WAITING FOR DATA -->\n            <div v-if=\"!prediction\" class=\"gp-prediction-empty\">\n              <v-icon icon=\"mdi-chart-timeline-variant\" size=\"36\"></v-icon>\n        \n              <div class=\"gp-prediction-empty-title\">\n                Waiting for prediction\n              </div>\n        \n              <div class=\"gp-prediction-muted\">\n                GreenPulse will display a forecast when a prediction message arrives.\n              </div>\n            </div>\n        \n            <template v-else>\n        \n              <!-- MODEL STATUS -->\n              <div class=\"gp-prediction-status-row\">\n                <span class=\"gp-label\">Model status</span>\n        \n                <span\n                  class=\"gp-status\"\n                  :class=\"predictionStatusClass\"\n                >\n                  {{ predictionStatus }}\n                </span>\n              </div>\n        \n              <!-- MAIN FORECAST -->\n              <div class=\"gp-prediction-hero\">\n        \n                <div class=\"gp-prediction-hero-label\">\n                  ESTIMATED TIME UNTIL WATERING\n                </div>\n        \n                <div v-if=\"predictionAvailable\" class=\"gp-prediction-time\">\n                  {{ predictionTime }}\n                </div>\n        \n                <div v-else class=\"gp-prediction-unavailable\">\n                  Prediction unavailable\n                </div>\n        \n                <div v-if=\"predictionAvailable\" class=\"gp-prediction-muted\">\n                  An estimate based on the observed soil-moisture trend\n                </div>\n        \n              </div>\n        \n              <!-- QUALITY WARNING -->\n              <div v-if=\"predictionAvailable\" class=\"gp-prediction-quality\" :class=\"predictionQualityClass\">\n                <v-icon :icon=\"predictionQualityIcon\" size=\"24\"></v-icon>\n        \n                <div>\n                  <div class=\"gp-prediction-quality-title\">\n                    Prediction quality: {{ predictionQuality }}\n                  </div>\n        \n                  <div class=\"gp-prediction-quality-description\">\n                    {{ predictionQualityDescription }}\n                  </div>\n                </div>\n              </div>\n        \n              <!-- PREDICTED DATE -->\n              <div v-if=\"predictionAvailable\" class=\"gp-prediction-date\">\n                <v-icon icon=\"mdi-calendar-clock-outline\" size=\"25\"></v-icon>\n        \n                <div>\n                  <div class=\"gp-prediction-detail-label\">\n                    Predicted watering time\n                  </div>\n        \n                  <div class=\"gp-prediction-detail-value\">\n                    {{ predictionDate }}\n                  </div>\n        \n                  <div class=\"gp-prediction-muted\">\n                    Sri Lanka Standard Time (UTC+05:30)\n                  </div>\n                </div>\n              </div>\n        \n              <!-- SOIL MOISTURE -->\n              <div class=\"gp-prediction-heading\">\n                Soil Moisture\n              </div>\n        \n              <div class=\"gp-prediction-grid\">\n        \n                <div class=\"gp-prediction-metric\">\n                  <div class=\"gp-prediction-detail-label\">\n                    Latest reading\n                  </div>\n        \n                  <div class=\"gp-prediction-metric-value\">\n                    {{ predictionCurrentMoisture }}\n                  </div>\n        \n                  <div class=\"gp-prediction-muted\">\n                    Raw sensor reading\n                  </div>\n                </div>\n        \n                <div class=\"gp-prediction-metric\">\n                  <div class=\"gp-prediction-detail-label\">\n                    Smoothed reading\n                  </div>\n        \n                  <div class=\"gp-prediction-metric-value\">\n                    {{ predictionSmoothedMoisture }}\n                  </div>\n        \n                  <div class=\"gp-prediction-muted\">\n                    Latest 5-minute interval median\n                  </div>\n                </div>\n        \n              </div>\n        \n              <!-- MODEL DETAILS -->\n              <template v-if=\"predictionAvailable\">\n        \n                <div class=\"gp-prediction-heading\">\n                  Prediction Details\n                </div>\n        \n                <div class=\"gp-prediction-grid\">\n        \n                  <div class=\"gp-prediction-detail-box\">\n                    <div class=\"gp-prediction-detail-label\">\n                      Watering threshold\n                    </div>\n        \n                    <div class=\"gp-prediction-detail-value\">\n                      {{ predictionThreshold }}\n                    </div>\n                  </div>\n        \n                  <div class=\"gp-prediction-detail-box\">\n                    <div class=\"gp-prediction-detail-label\">\n                      Estimated drying rate\n                    </div>\n        \n                    <div class=\"gp-prediction-detail-value\">\n                      {{ predictionDryingRate }}\n                    </div>\n                  </div>\n        \n                  <div class=\"gp-prediction-detail-box\">\n                    <div class=\"gp-prediction-detail-label\">\n                      Historical coverage\n                    </div>\n        \n                    <div class=\"gp-prediction-detail-value\">\n                      {{ predictionHistory }}\n                    </div>\n                  </div>\n        \n                  <div class=\"gp-prediction-detail-box\">\n                    <div class=\"gp-prediction-detail-label\">\n                      Trend fit (R²)\n                    </div>\n        \n                    <div class=\"gp-prediction-detail-value\">\n                      {{ predictionR2 }}\n                    </div>\n                  </div>\n        \n                </div>\n        \n              </template>\n        \n              <!-- UNAVAILABLE REASON -->\n              <div v-else class=\"gp-prediction-unavailable-message\">\n                {{ predictionReason }}\n              </div>\n        \n              <!-- DATA SOURCE -->\n              <div class=\"gp-prediction-footer\">\n                <v-icon icon=\"mdi-clock-outline\" size=\"15\"></v-icon>\n        \n                <span>\n                  Last prediction received: {{ predictionReceivedAt }}\n                </span>\n              </div>\n        \n              <div class=\"gp-prediction-disclaimer\">\n                This forecast is an estimate, not a guaranteed watering schedule.\n                Check the actual soil conditions before watering.\n              </div>\n        \n            </template>\n        \n          </div>\n        </div>\n\n        <div class=\"gp-footer\">\n            <span class=\"gp-live-dot\"></span>\n            Live data received through AWS IoT MQTT\n        </div>\n\n    </div>\n</template>\n\n\n<script>\n    export default {\n\n  data() {\n    return {\n      open: {\n        care: true,\n        weather: false,\n        notifications: false,\n        prediction: false\n      },\n\n      care: null,\n      weather: null,\n      notifications: null,\n      prediction: null\n    }\n  },\n\n  computed: {\n\n    careUrgency() {\n      return this.care?.urgency || 'WAITING'\n    },\n\n    urgencyClass() {\n      const value = String(this.careUrgency).toUpperCase()\n\n      if (value === 'CRITICAL') return 'urgency-critical'\n      if (value === 'HIGH') return 'urgency-high'\n      if (value === 'MEDIUM') return 'urgency-medium'\n      if (value === 'LOW') return 'urgency-low'\n\n      return 'urgency-unknown'\n    },\n\n    careRecommendation() {\n      return this.care?.recommendation ||\n        'Waiting for the next care recommendation.'\n    },\n\n    careReason() {\n      return this.care?.reason ||\n        'Waiting for environmental analysis.'\n    },\n\n    careQuote() {\n      return this.care?.literary_quote ||\n        'A little care goes a long way.'\n    },\n\n    weatherTemperature() {\n      const value = this.weather?.temperature\n\n      return value != null\n        ? `${value} °C`\n        : 'Waiting...'\n    },\n\n    rainProbability() {\n    const value = this.weather?.rain_probability;\n    \n    return value != null\n    ? (typeof value === 'number' ? `${value} %` : value)\n    : 'Waiting...';\n    },\n\n    weatherCondition() {\n      return this.weather?.condition || 'Waiting...'\n    },\n\n    weatherForecast() {\n      return this.weather?.forecast || 'Waiting...'\n    },\n\n    notificationCount() {\n      return this.notifications?.count ?? 0\n    },\n\n    notificationSummary() {\n      return this.notifications?.summary ||\n        'No notification summary available.'\n    },\n\n    predictionAvailable() {\n    return this.prediction?.model_status === 'available';\n    },\n    \n    predictionStatus() {\n    return this.prediction?.model_status || 'WAITING';\n    },\n    \n    predictionStatusClass() {\n    return this.predictionAvailable\n    ? 'gp-prediction-status-available'\n    : 'gp-prediction-status-unavailable';\n    },\n    \n    predictionQuality() {\n    return String(\n    this.prediction?.prediction_quality || 'UNKNOWN'\n    ).toUpperCase();\n    },\n    \n    predictionQualityClass() {\n    const quality = this.predictionQuality;\n    \n    if (quality === 'LOW') return 'gp-prediction-quality-low';\n    if (quality === 'MODERATE') return 'gp-prediction-quality-moderate';\n    if (quality === 'HIGH') return 'gp-prediction-quality-high';\n    \n    return 'gp-prediction-quality-unknown';\n    },\n    \n    predictionQualityIcon() {\n    const icons = {\n    LOW: 'mdi-alert-outline',\n    MODERATE: 'mdi-alert-circle-outline',\n    HIGH: 'mdi-check-circle-outline'\n    };\n    \n    return icons[this.predictionQuality] || 'mdi-information-outline';\n    },\n    \n    predictionQualityDescription() {\n    const descriptions = {\n    LOW:\n    'Limited historical data or a long forecast horizon. Treat this estimate cautiously.',\n    MODERATE:\n    'More historical evidence is available, but uncertainty remains.',\n    HIGH:\n    'The trend appears more consistent, but real-world accuracy still requires validation.'\n    };\n    \n    return descriptions[this.predictionQuality] ||\n    'Prediction quality has not been classified.';\n    },\n    \n    predictionTime() {\n    const value = this.prediction?.predicted_hours_until_watering;\n    \n    if (\n    value === null ||\n    value === undefined ||\n    typeof value === 'object' ||\n    typeof value === 'boolean' ||\n    (typeof value === 'string' && value.trim() === '')\n    ) {\n    return 'N/A';\n    }\n    \n    const hours = Number(value);\n    \n    if (!Number.isFinite(hours) || hours < 0) { return 'N/A' ; } const totalMinutes=Math.round(hours * 60); const\n      days=Math.floor(totalMinutes / 1440); const remainingHours=Math.floor( (totalMinutes % 1440) / 60 ); const\n      minutes=totalMinutes % 60; if (days> 0) {\n      return `${days}d ${remainingHours}h`;\n      }\n    \n      if (hours >= 1) {\n      return `${remainingHours}h ${minutes}m`;\n      }\n    \n      return `${minutes}m`;\n      },\n    \n      predictionDate() {\n      const value = this.prediction?.predicted_at;\n    \n      if (!value) return 'N/A';\n    \n      const date = new Date(value);\n    \n      if (Number.isNaN(date.getTime())) return 'Invalid timestamp';\n    \n      return date.toLocaleString('en-GB', {\n      timeZone: 'Asia/Colombo',\n      day: '2-digit',\n      month: 'short',\n      year: 'numeric',\n      hour: '2-digit',\n      minute: '2-digit',\n      hour12: true\n      });\n      },\n    \n      predictionCurrentMoisture() {\n      return this.formatPredictionNumber(\n      this.prediction?.current_soil_moisture,\n      '%'\n      );\n      },\n    \n      predictionSmoothedMoisture() {\n      return this.formatPredictionNumber(\n      this.prediction?.latest_interval_moisture,\n      '%'\n      );\n      },\n    \n      predictionThreshold() {\n      return this.formatPredictionNumber(\n      this.prediction?.watering_threshold,\n      '%'\n      );\n      },\n    \n      predictionDryingRate() {\n      const value = this.prediction?.estimated_drying_rate_per_hour;\n    \n      if (value == null || !Number.isFinite(Number(value))) {\n      return 'N/A';\n      }\n    \n      return `${Number(value).toFixed(4)} percentage points/hour`;\n      },\n    \n      predictionHistory() {\n      const value = this.prediction?.history_hours;\n      \n      if (\n      value === null ||\n      value === undefined ||\n      typeof value === 'object' ||\n      typeof value === 'boolean' ||\n      (typeof value === 'string' && value.trim() === '')\n      ) {\n      return 'N/A';\n      }\n      \n      const number = Number(value);\n      \n      return Number.isFinite(number)\n      ? `${number.toFixed(2)} hours`\n      : 'N/A';\n      },\n    \n      predictionR2() {\n      const value = this.prediction?.r_squared;\n      \n      if (\n      value === null ||\n      value === undefined ||\n      typeof value === 'object' ||\n      typeof value === 'boolean' ||\n      (typeof value === 'string' && value.trim() === '')\n      ) {\n      return 'N/A';\n      }\n      \n      const number = Number(value);\n      \n      return Number.isFinite(number)\n      ? number.toFixed(3)\n      : 'N/A';\n      },\n    \n      predictionReason() {\n      return this.prediction?.reason ||\n      'More usable historical readings may be required.';\n      },\n    \n      predictionReceivedAt() {\n      const value = this.prediction?._received_at;\n    \n      if (!value) return 'Waiting for update';\n    \n      const date = new Date(value);\n    \n      if (Number.isNaN(date.getTime())) return 'Invalid timestamp';\n    \n      return date.toLocaleString('en-GB', {\n      timeZone: 'Asia/Colombo',\n      day: '2-digit',\n      month: 'short',\n      year: 'numeric',\n      hour: '2-digit',\n      minute: '2-digit',\n      hour12: true\n      });\n      },\n    \n  },\n  \n  methods: {\n  formatPredictionNumber(value, suffix = '') {\n  if (\n  value === null ||\n  value === undefined ||\n  typeof value === 'boolean' ||\n  typeof value === 'object'\n  ) {\n  return 'N/A';\n  }\n  \n  if (\n  typeof value === 'string' &&\n  value.trim() === ''\n  ) {\n  return 'N/A';\n  }\n  \n  const number = Number(value);\n  \n  if (!Number.isFinite(number)) {\n  return 'N/A';\n  }\n  \n  return `${number.toFixed(1)}${suffix}`;\n  }\n  },\n  \n  watch: {\n\n    msg: {\n\n      immediate: true,\n\n      handler(message) {\n\n        if (!message || message.payload == null) return\n\n        let payload = message.payload\n\n        if (typeof payload === 'string') {\n          try {\n            payload = JSON.parse(payload)\n          } catch (error) {\n            console.error(\n              'GreenPulse JSON parsing failed:',\n              error\n            )\n            return\n          }\n        }\n\n        if (\n          typeof payload !== 'object' ||\n          Array.isArray(payload)\n        ) {\n          return\n        }\n\n        if (message.section === 'care') {\n          this.care = { ...payload }\n        }\n\n        else if (message.section === 'weather') {\n          this.weather = { ...payload }\n        }\n\n        else if (message.section === 'notifications') {\n          this.notifications = { ...payload }\n        }\n\n        else if (message.section === 'prediction') {\n        const result = payload.prediction || payload;\n        \n        this.prediction = {\n        ...result,\n        _received_at: payload.timestamp || new Date().toISOString()\n        };\n        }\n\n      }\n\n    }\n\n  }\n\n}\n</script>\n\n\n<style>\n    .gp-smart-care {\n        --gp-green: #19734b;\n        --gp-green-light: #edf7f1;\n        --gp-border: #e4eae5;\n        --gp-text: #26362d;\n        --gp-muted: #748079;\n\n        width: 100%;\n        max-width: 950px;\n\n        margin: 0 auto;\n        padding: 16px;\n\n        color: var(--gp-text);\n        box-sizing: border-box;\n    }\n\n    .gp-smart-care * {\n        box-sizing: border-box;\n    }\n\n\n    /* PAGE HEADER */\n\n    .gp-page-head {\n        margin-bottom: 18px;\n    }\n\n    .gp-eyebrow {\n        color: var(--gp-green);\n\n        font-size: 11px;\n        font-weight: 800;\n\n        letter-spacing: 1.3px;\n    }\n\n    .gp-page-head h2 {\n        margin: 5px 0;\n        font-size: 25px;\n    }\n\n    .gp-page-head p {\n        margin: 0;\n\n        color: var(--gp-muted);\n\n        font-size: 13px;\n    }\n\n\n    /* ACCORDION */\n\n    .gp-section {\n        margin-bottom: 12px;\n\n        border: 1px solid var(--gp-border);\n\n        border-radius: 14px;\n\n        overflow: hidden;\n\n        background: var(--v-theme-surface, #fff);\n    }\n\n    .gp-section-header {\n        width: 100%;\n\n        display: flex;\n\n        justify-content: space-between;\n        align-items: center;\n\n        gap: 12px;\n\n        border: none;\n\n        padding: 15px 17px;\n\n        background: transparent;\n\n        color: inherit;\n\n        cursor: pointer;\n\n        text-align: left;\n    }\n\n    .gp-section-header:hover {\n        background: var(--gp-green-light);\n    }\n\n    .gp-section-left {\n        display: flex;\n\n        align-items: center;\n\n        gap: 12px;\n    }\n\n    .gp-section-left>.v-icon {\n        color: var(--gp-green);\n    }\n\n    .gp-title {\n        font-size: 15px;\n        font-weight: 750;\n    }\n\n    .gp-small {\n        margin-top: 2px;\n\n        color: var(--gp-muted);\n\n        font-size: 11px;\n    }\n\n    .gp-section-right {\n        display: flex;\n\n        align-items: center;\n\n        gap: 10px;\n    }\n\n\n    /* CONTENT */\n\n    .gp-content {\n        padding: 6px 18px 18px;\n\n        border-top: 1px solid var(--gp-border);\n    }\n\n    .gp-label {\n        margin-top: 12px;\n\n        color: var(--gp-green);\n\n        font-size: 12px;\n        font-weight: 750;\n    }\n\n    .gp-main-text {\n        margin-top: 5px;\n\n        font-size: 16px;\n        font-weight: 600;\n\n        line-height: 1.7;\n    }\n\n    .gp-text {\n        margin-top: 5px;\n\n        font-size: 14px;\n\n        line-height: 1.7;\n    }\n\n    .gp-divider {\n        height: 1px;\n\n        margin: 15px 0;\n\n        background: var(--gp-border);\n    }\n\n\n    /* GRID */\n\n    .gp-grid {\n        display: grid;\n\n        grid-template-columns:\n            repeat(2, minmax(0, 1fr));\n\n        gap: 12px;\n\n        margin-top: 12px;\n    }\n\n    .gp-info {\n        padding: 13px;\n\n        border-radius: 10px;\n\n        background: var(--gp-green-light);\n    }\n\n    .gp-info span {\n        display: block;\n\n        color: var(--gp-muted);\n\n        font-size: 11px;\n\n        margin-bottom: 5px;\n    }\n\n    .gp-info strong {\n        font-size: 14px;\n    }\n\n\n    /* QUOTE */\n\n    .gp-quote {\n        margin-top: 16px;\n\n        padding: 12px 14px;\n\n        border-radius: 10px;\n\n        background: var(--gp-green-light);\n\n        color: #115638;\n\n        font-size: 13px;\n        font-style: italic;\n\n        line-height: 1.6;\n    }\n\n\n    /* STATUS */\n\n    .gp-status {\n        padding: 6px 10px;\n\n        border-radius: 16px;\n\n        font-size: 10px;\n        font-weight: 800;\n    }\n\n    .urgency-critical {\n        color: #b42318;\n        background: #feeceb;\n    }\n\n    .urgency-high {\n        color: #c65b12;\n        background: #fff0df;\n    }\n\n    .urgency-medium {\n        color: #8a6908;\n        background: #fff6d9;\n    }\n\n    .urgency-low {\n        color: #167346;\n        background: #e6f5eb;\n    }\n\n    .urgency-unknown {\n        color: #68746b;\n        background: #eef1ee;\n    }\n\n\n    /* COUNT */\n\n    .gp-count {\n        min-width: 24px;\n\n        padding: 4px 7px;\n\n        border-radius: 12px;\n\n        background: var(--gp-green-light);\n\n        color: var(--gp-green);\n\n        font-size: 11px;\n        font-weight: 800;\n\n        text-align: center;\n    }\n\n\n    /* FOOTER */\n\n    .gp-footer {\n        display: flex;\n\n        justify-content: center;\n        align-items: center;\n\n        gap: 7px;\n\n        margin-top: 14px;\n\n        color: var(--gp-muted);\n\n        font-size: 11px;\n    }\n\n    .gp-live-dot {\n        width: 7px;\n        height: 7px;\n\n        border-radius: 50%;\n\n        background: #2a9b60;\n    }\n\n\n    /* MOBILE */\n\n    @media (max-width: 600px) {\n\n        .gp-smart-care {\n            padding: 10px;\n        }\n\n        .gp-grid {\n            grid-template-columns: 1fr;\n        }\n\n        .gp-section-header {\n            padding: 13px;\n        }\n\n        .gp-small {\n            display: none;\n        }\n\n    }\n    /* WATERING PREDICTION */\n    \n    .gp-prediction-empty {\n    padding: 22px 12px;\n    text-align: center;\n    color: var(--gp-muted);\n    }\n    \n    .gp-prediction-empty-title {\n    margin: 8px 0 5px;\n    color: var(--gp-text);\n    font-size: 15px;\n    font-weight: 750;\n    }\n    \n    .gp-prediction-muted {\n    margin-top: 5px;\n    color: var(--gp-muted);\n    font-size: 11px;\n    line-height: 1.6;\n    overflow-wrap: anywhere;\n    }\n    \n    .gp-prediction-status-row {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    gap: 10px;\n    margin: 10px 0 14px;\n    }\n    \n    .gp-prediction-status-available {\n    color: #167346;\n    background: #e6f5eb;\n    }\n    \n    .gp-prediction-status-unavailable {\n    color: #a52e2e;\n    background: #feeceb;\n    }\n    \n    .gp-prediction-hero {\n    padding: 21px 14px;\n    border-radius: 12px;\n    background: var(--gp-green-light);\n    text-align: center;\n    }\n    \n    .gp-prediction-hero-label {\n    color: var(--gp-muted);\n    font-size: 10px;\n    font-weight: 800;\n    letter-spacing: 0.8px;\n    line-height: 1.6;\n    }\n    \n    .gp-prediction-time {\n    margin: 10px 0 6px;\n    color: var(--gp-green);\n    font-size: clamp(28px, 5vw, 38px);\n    font-weight: 800;\n    line-height: 1.2;\n    }\n    \n    .gp-prediction-unavailable {\n    margin-top: 10px;\n    color: #a52e2e;\n    font-size: 19px;\n    font-weight: 750;\n    }\n    \n    .gp-prediction-quality {\n    display: flex;\n    align-items: flex-start;\n    gap: 11px;\n    margin-top: 13px;\n    padding: 13px;\n    border: 1px solid transparent;\n    border-radius: 11px;\n    }\n    \n    .gp-prediction-quality-title {\n    font-size: 13px;\n    font-weight: 800;\n    line-height: 1.5;\n    }\n    \n    .gp-prediction-quality-description {\n    margin-top: 4px;\n    font-size: 11px;\n    line-height: 1.6;\n    overflow-wrap: anywhere;\n    }\n    \n    .gp-prediction-quality-low {\n    color: #86551a;\n    background: #fff5df;\n    border-color: #f2dfb6;\n    }\n    \n    .gp-prediction-quality-moderate {\n    color: #76551a;\n    background: #fff8e8;\n    border-color: #efdfb7;\n    }\n    \n    .gp-prediction-quality-high {\n    color: #226c43;\n    background: #e8f6ec;\n    border-color: #cce8d3;\n    }\n    \n    .gp-prediction-quality-unknown {\n    color: #596975;\n    background: #edf3f7;\n    border-color: #d8e4eb;\n    }\n    \n    .gp-prediction-date {\n    display: flex;\n    align-items: flex-start;\n    gap: 12px;\n    margin-top: 15px;\n    padding: 14px 2px;\n    border-bottom: 1px solid var(--gp-border);\n    color: var(--gp-green);\n    }\n    \n    .gp-prediction-detail-label {\n    color: var(--gp-muted);\n    font-size: 11px;\n    line-height: 1.5;\n    }\n    \n    .gp-prediction-detail-value {\n    margin-top: 5px;\n    color: var(--gp-text);\n    font-size: 13px;\n    font-weight: 750;\n    line-height: 1.6;\n    overflow-wrap: anywhere;\n    }\n    \n    .gp-prediction-heading {\n    margin: 20px 0 10px;\n    color: var(--gp-text);\n    font-size: 13px;\n    font-weight: 800;\n    }\n    \n    .gp-prediction-grid {\n    display: grid;\n    grid-template-columns: repeat(2, minmax(0, 1fr));\n    gap: 10px;\n    margin-top: 10px;\n    }\n    \n    .gp-prediction-metric,\n    .gp-prediction-detail-box {\n    min-width: 0;\n    padding: 13px;\n    border: 1px solid var(--gp-border);\n    border-radius: 10px;\n    background: var(--v-theme-surface, #fff);\n    }\n    \n    .gp-prediction-metric-value {\n    margin: 8px 0 5px;\n    color: var(--gp-green);\n    font-size: clamp(22px, 4vw, 28px);\n    font-weight: 800;\n    overflow-wrap: anywhere;\n    }\n    \n    .gp-prediction-unavailable-message {\n    margin-top: 14px;\n    padding: 13px;\n    border-radius: 10px;\n    background: #feeceb;\n    color: #a52e2e;\n    font-size: 12px;\n    line-height: 1.6;\n    overflow-wrap: anywhere;\n    }\n    \n    .gp-prediction-footer {\n    display: flex;\n    align-items: flex-start;\n    gap: 7px;\n    margin-top: 17px;\n    padding-top: 13px;\n    border-top: 1px solid var(--gp-border);\n    color: var(--gp-muted);\n    font-size: 10px;\n    line-height: 1.6;\n    }\n    \n    .gp-prediction-disclaimer {\n    margin-top: 9px;\n    color: var(--gp-muted);\n    font-size: 10px;\n    line-height: 1.6;\n    }\n    \n    @media (max-width: 400px) {\n    .gp-prediction-grid {\n    gap: 8px;\n    }\n    \n    .gp-prediction-metric,\n    .gp-prediction-detail-box {\n    padding: 10px;\n    }\n    }\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 880,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3aa4c230b0fe960b",
+        "type": "function",
+        "z": "f85c67dcadd9a456",
+        "name": "function_weather",
+        "func": "// Parse MQTT payload if it is a JSON string.\nlet payload = msg.payload;\n\nif (typeof payload === \"string\") {\n    try {\n        payload = JSON.parse(payload);\n    } catch (error) {\n        node.error(\"Invalid weather JSON\", msg);\n        return null;\n    }\n}\n\nif (!payload || typeof payload !== \"object\") {\n    node.warn(\"Invalid weather payload\");\n    return null;\n}\n\n// Extract the nested weather object.\nconst weather = payload.weather || payload;\n\n// Normalize the backend fields to match the dashboard.\nmsg.section = \"weather\";\n\nmsg.payload = {\n    temperature: weather.temperature ?? null,\n\n    // The current backend supplies a Boolean rain_expected,\n    // not a numeric rain probability.\n    rain_probability:\n        typeof weather.rain_expected === \"boolean\"\n            ? (weather.rain_expected ? \"Expected\" : \"Not expected\")\n            : null,\n\n    condition:\n        weather.description ??\n        weather.condition ??\n        \"Unavailable\",\n\n    forecast:\n        weather.watering_hint ??\n        weather.forecast ??\n        \"No watering guidance available\"\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 180,
+        "wires": [
+            [
+                "4efa32e5227c7ba0"
+            ]
+        ]
+    },
+    {
+        "id": "2d45765a2acd3f51",
+        "type": "function",
+        "z": "f85c67dcadd9a456",
+        "name": "function_care",
+        "func": "msg.section = \"care\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 240,
+        "wires": [
+            [
+                "4efa32e5227c7ba0"
+            ]
+        ]
+    },
+    {
+        "id": "cc8cea674c96c24a",
+        "type": "function",
+        "z": "f85c67dcadd9a456",
+        "name": "function _notification",
+        "func": "// Parse MQTT payload if it is a JSON string.\nlet payload = msg.payload;\n\nif (typeof payload === \"string\") {\n    try {\n        payload = JSON.parse(payload);\n    } catch (error) {\n        node.error(\"Invalid notifications JSON\", msg);\n        return null;\n    }\n}\n\nif (!payload || typeof payload !== \"object\") {\n    node.warn(\"Invalid notifications payload\");\n    return null;\n}\n\nconst delivery = payload.email_delivery || {};\n\nconst emails = Array.isArray(payload.recent_care_emails)\n    ? payload.recent_care_emails\n    : [];\n\n// Build a summary from the actual backend fields.\nconst emailStatus = delivery.status || \"unknown\";\n\nlet deliverySummary;\n\nif (delivery.sent === true) {\n    deliverySummary = \"Care summary email sent successfully.\";\n} else if (emailStatus === \"skipped_duplicate\") {\n    deliverySummary =\n        \"Email not sent because the care notification was a duplicate.\";\n} else if (emailStatus === \"unknown\") {\n    deliverySummary = \"Email delivery status is unavailable.\";\n} else {\n    deliverySummary = `Email delivery status: ${emailStatus}.`;\n}\n\nconst fetchStatus = payload.email_fetch_status || \"unknown\";\n\nconst fetchSummary =\n    fetchStatus === \"success\"\n        ? `${emails.length} recent care email(s) retrieved.`\n        : `Care email retrieval status: ${fetchStatus}.`;\n\n// Route and normalize for the existing dashboard.\nmsg.section = \"notifications\";\n\nmsg.payload = {\n    count: emails.length,\n\n    summary: `${deliverySummary} ${fetchSummary}`,\n\n    email_delivery_status: emailStatus,\n    email_sent: delivery.sent === true,\n    urgency: payload.urgency || \"UNKNOWN\",\n    recommendation: payload.recommendation || \"\",\n    recent_care_emails: emails,\n    email_fetch_status: fetchStatus\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 320,
+        "wires": [
+            [
+                "4efa32e5227c7ba0"
+            ]
+        ]
+    },
+    {
+        "id": "355e902eae9db6ae",
+        "type": "mqtt in",
+        "z": "f85c67dcadd9a456",
+        "name": "",
+        "topic": "greenpulse/device01/prediction",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "9055f47741664db7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 350,
+        "y": 340,
+        "wires": [
+            [
+                "e66aa069c6878d13"
+            ]
+        ]
+    },
+    {
+        "id": "e66aa069c6878d13",
+        "type": "function",
+        "z": "f85c67dcadd9a456",
+        "name": "function_prediction",
+        "func": "msg.section = \"prediction\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 380,
+        "wires": [
+            [
+                "4efa32e5227c7ba0"
+            ]
+        ]
+    },
+    {
+        "id": "e38c2d8ad70c0043",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.32.0"
+        }
+    }
+]

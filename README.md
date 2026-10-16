@@ -1,4 +1,7 @@
 # Green Pulse - An IoT-Based Smart Plant Monitoring and Care System
+## Important Files
+### Main.ino - ESP32 Firmware
+### flows.json - Node-RED Flows
 
 ## Deployment Guide (AWS EC2)
 

@@ -85,9 +85,7 @@ class GreenPulseOrchestrator:
         # 3. FETCH RECENT CARE EMAILS
         # =============================================
 
-        email_result = self.notification_agent.fetch_care_emails(
-            max_results=5
-        )
+        email_result = self.notification_agent.fetch_care_emails()
 
         print("\n========== CARE EMAIL FETCH ==========")
         print(f"Status: {email_result.get('status')}")
